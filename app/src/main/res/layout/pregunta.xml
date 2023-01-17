@@ -10,8 +10,10 @@
         android:layout_width="800dp"
         android:layout_height="1281dp"
         android:orientation="vertical"
-        tools:layout_editor_absoluteX="-1dp"
-        tools:layout_editor_absoluteY="1dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <Space
             android:layout_width="match_parent"
@@ -68,6 +70,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="#00000000"
+                    android:text="topLeft"
                     app:srcCompat="@drawable/top_left" />
 
                 <ImageView
@@ -76,6 +79,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="#00000000"
+                    android:text="topRight"
                     app:srcCompat="@drawable/top_right" />
             </LinearLayout>
         </LinearLayout>
@@ -101,6 +105,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="#00000000"
+                    android:text="middleLeft"
                     app:srcCompat="@drawable/middle_left" />
 
                 <ImageView
@@ -109,6 +114,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="#00000000"
+                    android:text="middleRight"
                     app:srcCompat="@drawable/middle_right" />
             </LinearLayout>
         </LinearLayout>
@@ -134,6 +140,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="#00000000"
+                    android:text="bottomLeft"
                     app:srcCompat="@drawable/bottom_left" />
 
                 <ImageView
@@ -142,6 +149,7 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:background="#00000000"
+                    android:text="bottomRight"
                     app:srcCompat="@drawable/bottom_right" />
             </LinearLayout>
 
