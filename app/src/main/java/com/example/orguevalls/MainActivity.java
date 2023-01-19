@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         pregunta = findViewById(R.id.pregunta);
         imatgePregunta = findViewById(R.id.img);
-        botoSubmit = findViewById(R.id.ButtonSeguent);
+        //botoSubmit = findViewById(R.id.ButtonSeguent);
         
         topLeft = findViewById(R.id.top_left);
         topRight = findViewById(R.id.top_right);
@@ -39,7 +39,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         middleRight = findViewById(R.id.middle_right);
         bottomLeft = findViewById(R.id.bottom_left);
         bottomRight = findViewById(R.id.bottom_right);
-        
         
         topLeft.setOnClickListener(this);
         topRight.setOnClickListener(this);
@@ -57,12 +56,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         ImageView imatgeSeleccionada = (ImageView) view;
 
-        Toast.makeText(getApplicationContext(),imatgeSeleccionada.toString(),Toast.LENGTH_SHORT).show();
+        //Toast.makeText(getApplicationContext(),imatgeSeleccionada.toString(),Toast.LENGTH_SHORT).show();
 
         if(opcioSeleccionada.equals(Opcions.correctAnswers[indexPreguntaActual])){
             puntuacio++;
             indexPreguntaActual++;
+            Toast.makeText(getApplicationContext(),"CORRECTE!",Toast.LENGTH_SHORT).show();
             carregaNovaPregunta();
+        }else{
+            Toast.makeText(getApplicationContext(),"NO ÉS CORRECTE!",Toast.LENGTH_SHORT).show();
         }
     }
 

@@ -19,6 +19,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:background="#54FFFFFF"
             android:gravity="center"
             android:orientation="vertical">
 
@@ -62,7 +63,7 @@
                 android:shadowDx="5"
                 android:shadowDy="5"
                 android:shadowRadius="5"
-                android:text="Comença"
+                android:text="Comença!"
                 android:textColor="#FFFFFF"
                 android:textSize="34dp"
                 android:textStyle="bold" />
