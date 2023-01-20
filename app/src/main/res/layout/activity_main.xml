@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
+    android:background="@drawable/background_principal"
     tools:context=".MainActivity">
 
     <FrameLayout
@@ -67,8 +67,30 @@
                 android:textColor="#FFFFFF"
                 android:textSize="34dp"
                 android:textStyle="bold" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
+            <Button
+                android:id="@+id/btn_info_orgue"
+                android:layout_width="match_parent"
+                android:layout_height="86dp"
+                android:background="@drawable/button_background"
+                android:ellipsize="none"
+                android:fontFamily="sans-serif-smallcaps"
+                android:shadowColor="#000000"
+                android:shadowDx="5"
+                android:shadowDy="5"
+                android:shadowRadius="5"
+                android:text="Informació"
+                android:textColor="#FFFFFF"
+                android:textSize="34dp"
+                android:textStyle="bold" />
+
         </LinearLayout>
 
     </FrameLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
 

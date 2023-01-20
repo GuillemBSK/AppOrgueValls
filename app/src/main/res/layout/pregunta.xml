@@ -27,25 +27,25 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/pregunta2"
-                android:layout_width="355dp"
+                android:id="@+id/txt_errors"
+                android:layout_width="250dp"
                 android:layout_height="71dp"
                 android:layout_gravity="center"
                 android:background="#40000000"
                 android:fontFamily="sans-serif-smallcaps"
                 android:gravity="center"
-                android:shadowColor="#000000"
+                android:shadowColor="#4D000000"
                 android:shadowDx="5"
                 android:shadowDy="5"
                 android:shadowRadius="5"
                 android:text="ERRORS: "
                 android:textAlignment="center"
-                android:textColor="#FFFFFF"
+                android:textColor="#FF2600"
                 android:textSize="24sp" />
 
             <TextView
-                android:id="@+id/pregunta3"
-                android:layout_width="573dp"
+                android:id="@+id/num_errors"
+                android:layout_width="391dp"
                 android:layout_height="71dp"
                 android:layout_gravity="center"
                 android:layout_weight="1"
@@ -56,10 +56,46 @@
                 android:shadowDx="5"
                 android:shadowDy="5"
                 android:shadowRadius="5"
-                android:text="ENCERTS: "
+                android:text="0"
                 android:textAlignment="center"
                 android:textColor="#FFFFFF"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/txt_encerts"
+                android:layout_width="573dp"
+                android:layout_height="71dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="#40000000"
+                android:fontFamily="sans-serif-smallcaps"
+                android:gravity="center"
+                android:shadowColor="#4D000000"
+                android:shadowDx="5"
+                android:shadowDy="5"
+                android:shadowRadius="5"
+                android:text="ENCERTS: "
+                android:textAlignment="center"
+                android:textColor="#4CAF50"
                 android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/num_encerts"
+                android:layout_width="411dp"
+                android:layout_height="71dp"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:background="#40000000"
+                android:fontFamily="sans-serif-smallcaps"
+                android:gravity="center"
+                android:shadowColor="#000000"
+                android:shadowDx="5"
+                android:shadowDy="5"
+                android:shadowRadius="5"
+                android:text="0"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp" />
         </LinearLayout>
 
         <Space
@@ -81,7 +117,7 @@
             android:text="Busqueu aquest carreu i situeu-lo al plànol."
             android:textAlignment="center"
             android:textColor="#FFFFFF"
-            android:textSize="34sp" />
+            android:textSize="28sp" />
 
         <Space
             android:layout_width="match_parent"
@@ -213,7 +249,7 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/btn_info"
                 android:layout_width="380dp"
                 android:layout_height="65dp"
                 android:layout_weight="1"
