@@ -20,6 +20,8 @@ public class Informacio extends AppCompatActivity implements View.OnClickListene
         setContentView(R.layout.informacio);
         getSupportActionBar().hide();
 
+        //Omplim la informació segons el numero de pregunta.
+
         TextView info1 = findViewById(R.id.info1);
         TextView info2 = findViewById(R.id.info2);
         TextView info3 = findViewById(R.id.info3);
@@ -32,6 +34,7 @@ public class Informacio extends AppCompatActivity implements View.OnClickListene
         info4.setText(Opcions.info[indexPreguntaActual][3]);
         info5.setText(Opcions.info[indexPreguntaActual][4]);
 
+        //Botó pregunta següent.
 
         Button btn_enrere_informacio = findViewById(R.id.btn_enrere_informacio);
         btn_enrere_informacio.setOnClickListener(this);
@@ -39,6 +42,6 @@ public class Informacio extends AppCompatActivity implements View.OnClickListene
 
     @Override
     public void onClick(View view) {
-        finish();
+        finish(); //Tornem a la pregunta (Sense perdre les dades.)
     }
 }

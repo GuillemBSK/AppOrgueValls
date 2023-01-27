@@ -2,6 +2,13 @@ package com.example.orguevalls;
 
 public class Opcions {
 
+    /*Cada un dels arrays/matrius conté la informació del bloc que volem omplir. L'índex de pregunta actual,
+    * també és l'index que s'utilitza en l'array. Per tant si tenim l'array en l'ordre correcte, sempre
+    * agafarem la informació que ens interesa en la pregunta actual.*/
+
+
+    // === PREGUNTES ===
+
     public static String question[] ={
             "Busqueu aquest carreu i situeu-lo al plànol. (Cal respondre per avançar)",
             "Quants escuts de la ciutat has pogut comptabilitzar al llarg de la visita?",
@@ -18,6 +25,8 @@ public class Opcions {
             "Heu recordat de comptar els escuts de la ciutat? Ara podeu donar la resposta."
     };
 
+    // === POSSIBLES RESPOSTES (IMATGES) ===
+
     public static int choices[][] = {
             {R.id.top_left,R.id.top_right,R.id.middle_left, R.id.middle_right, R.id.bottom_left, R.id.bottom_right},
             {R.id.top_left,R.id.top_right,R.id.middle_left, R.id.middle_right, R.id.bottom_left, R.id.bottom_right},
@@ -30,6 +39,8 @@ public class Opcions {
 
     };
 
+    // === RESPOSTES CORRECTES (IMATGES) ===
+
     public static int correctAnswers[] = {
             R.id.bottom_left,
             R.id.bottom_left,
@@ -40,6 +51,8 @@ public class Opcions {
             R.id.bottom_left,
             R.id.middle_left
     };
+
+    // === IMATGE DE CADA PREGUNTA ===
 
     public static int[] images = {
             R.drawable.pregunta1,
@@ -53,11 +66,9 @@ public class Opcions {
             R.drawable.pregunta4,
             R.drawable.pregunta4,
             R.drawable.pregunta4,
-
-
-
-
     };
+
+    // === INFORMACIÓ DE CADA PREGUNTA ===
 
     public static String[][] info = {
             {"Aquests carreus donen informació de qui i com s’ha pogut  construir aquest edifici.","Els lleons representen la força, el valor i la noblesa i per altra banda veiem l’escut de la ciutat.","La gent de la ciutat s’han preocupat per poder-lo construir i hi ha col·laborat en la mesura que a cadascú li era possible."," "," "},
@@ -70,6 +81,8 @@ public class Opcions {
             {""},
 
     };
+
+    // === OPCIONS DELS SPINNERS ===
 
     public static String[][] spinnerChoices = {
             {""},
@@ -84,5 +97,20 @@ public class Opcions {
             {""},
             {""},
             {"No hi ha cap diferència, és el mateix.", "L’orguener construeix i l’organista toca.","L’organista construeix i l’orguener toca.","L’orguener toca molt i l’organista no toca gaire."}
+    };
+
+    public static String[] spinnerAnswers = {
+            "",
+            "Més de 40",
+            "",
+            "Està suspès en una balconada",
+            "",
+            "Els castells i el campanar",
+            "",
+            "EN CONSTRUCCIÓ",
+            "",
+            "",
+            "",
+            "L’orguener construeix i l’organista toca."
     };
 }

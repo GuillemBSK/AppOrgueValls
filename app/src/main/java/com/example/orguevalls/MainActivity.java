@@ -25,6 +25,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
+
+        //Iniciem el test al fer tap al botó.
+
         Intent intent = new Intent(MainActivity.this, Pregunta.class);
         startActivityForResult(intent,0);
     }

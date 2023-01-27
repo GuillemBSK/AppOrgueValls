@@ -20,8 +20,8 @@ public class Pregunta extends AppCompatActivity implements View.OnClickListener{
     ImageButton botoInfo;
     ImageView topLeft, topRight, middleLeft, middleRight, bottomLeft, bottomRight;
     TextView txtIdPregunta;
-    int puntuacio = 0;
-    int errors = 0;
+    static int puntuacio = 0;
+    static int errors = 0;
     static int indexPreguntaActual = 0;
     int numPreguntesTotals = 12;
 
@@ -31,6 +31,7 @@ public class Pregunta extends AppCompatActivity implements View.OnClickListener{
         setContentView(R.layout.pregunta);
         getSupportActionBar().hide();
 
+        //Assignem cada un dels elements del layout a una variable.
 
         pregunta = findViewById(R.id.preguntaSpinner);
         imatgePregunta = findViewById(R.id.img);
@@ -51,7 +52,7 @@ public class Pregunta extends AppCompatActivity implements View.OnClickListener{
         bottomLeft.setOnClickListener(this);
         bottomRight.setOnClickListener(this);
 
-
+        //Obrim el layout d'informació.
 
         botoInfo.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -75,23 +76,24 @@ public class Pregunta extends AppCompatActivity implements View.OnClickListener{
         int id = view.getId(); //Element seleccionat
         int element = Opcions.correctAnswers[indexPreguntaActual]; //Element resposta correcte.
 
-        if(id == element){
+        if(id == element){  //Si l'id de la resposta seleccionada és igual al de la correcte sumem punts, i passem a la següent.
             sumaEncerts();
             indexPreguntaActual++;
             Toast.makeText(getApplicationContext(),"CORRECTE!",Toast.LENGTH_SHORT).show();
             carregaNovaPregunta();
         }else{
-            sumaErrors();
+            sumaErrors();  //Si l'id de la resposta seleccionada és diferent al de la correcte sumem errors.
             Toast.makeText(getApplicationContext(),"INCORRECTE",Toast.LENGTH_SHORT).show();
         }
     }
 
 
     private void carregaNovaPregunta() {
-        if(indexPreguntaActual == numPreguntesTotals){
+        if(indexPreguntaActual == numPreguntesTotals){  //En cas de ser la última pregunta, carregem el layout de resum.
             acabaTest();
         }
 
+        //Definim si és una pregunta és tipus Spinner segons l'índex.
         else if(indexPreguntaActual == 1 || indexPreguntaActual == 3 || indexPreguntaActual == 5 || indexPreguntaActual == 7 || indexPreguntaActual == 11){
             PreguntaSpinner.indexPreguntaActual = this.indexPreguntaActual;
             Intent intent = new Intent(Pregunta.this, PreguntaSpinner.class);
@@ -102,6 +104,7 @@ public class Pregunta extends AppCompatActivity implements View.OnClickListener{
             imatgePregunta.setImageResource(Opcions.images[indexPreguntaActual]);
         }
 
+        //Si no, carreguem una nova pregunta i imatge.
         else{
             txtIdPregunta.setText(""+indexPreguntaActual);
             pregunta.setText(Opcions.question[indexPreguntaActual]);
@@ -111,20 +114,17 @@ public class Pregunta extends AppCompatActivity implements View.OnClickListener{
 
     private void sumaEncerts(){
         puntuacio++;
-        TextView num_encerts = findViewById(R.id.num_encerts);
+        TextView num_encerts = findViewById(R.id.num_encerts_spinner);
         num_encerts.setText(""+puntuacio);
     }
 
     private void sumaErrors(){
         errors++;
-        TextView num_errors = findViewById(R.id.num_errors);
+        TextView num_errors = findViewById(R.id.num_errors_spinner);
         num_errors.setText(""+errors);
     }
 
-    private void obrirDialog(){
-        Toast.makeText(getApplicationContext(),"INFO!",Toast.LENGTH_SHORT).show();
-    }
-
+    //Obrim el resum (Layout que apareix al finalitzar el test.)
     private void acabaTest() {
 
         TextView num_encerts = findViewById(R.id.encerts_resum);
@@ -135,10 +135,6 @@ public class Pregunta extends AppCompatActivity implements View.OnClickListener{
 
         Intent intent = new Intent(Pregunta.this, Resum.class);
         startActivityForResult(intent,0);
-    }
-
-    public static int getIndexPreguntaActual() {
-        return indexPreguntaActual;
     }
 
 }
