@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/background_principal"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txt_cantates_orgue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="#26000000"
+        android:fontFamily="sans-serif-smallcaps"
+        android:gravity="center"
+        android:paddingTop="10dp"
+        android:paddingEnd="10dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="10dp"
+        android:shadowColor="#000000"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="5"
+        android:text="CANTATES DE L'ORGUE"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:lineHeight="45dp"
+        tools:layout_conversion_absoluteHeight="202dp"
+        tools:layout_conversion_absoluteWidth="340dp"
+        tools:layout_editor_absoluteX="59dp"
+        tools:layout_editor_absoluteY="46dp" />
+
+    <Button
+        android:id="@+id/btn_enrere_cantates"
+        android:layout_width="427dp"
+        android:layout_height="54dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/button_background"
+        android:ellipsize="none"
+        android:fontFamily="sans-serif-smallcaps"
+        android:shadowColor="#000000"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="5"
+        android:text="⬅Torna a l'inici"
+        android:textColor="#FFFFFF"
+        android:textSize="34dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btn_play_cantates"
+        android:layout_width="196dp"
+        android:layout_height="203dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@android:drawable/ic_media_play"
+        tools:layout_editor_absoluteY="539dp" />
+
+</android.support.constraint.ConstraintLayout>

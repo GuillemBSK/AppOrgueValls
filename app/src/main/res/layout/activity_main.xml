@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,8 +9,8 @@
 
     <FrameLayout
         android:id="@+id/frameLayout"
-        android:layout_width="576dp"
-        android:layout_height="486dp"
+        android:layout_width="574dp"
+        android:layout_height="599dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -18,7 +18,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="597dp"
             android:background="#54FFFFFF"
             android:gravity="center"
             android:orientation="vertical">
@@ -88,9 +88,29 @@
                 android:textSize="34dp"
                 android:textStyle="bold" />
 
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
+            <Button
+                android:id="@+id/btn_cantates"
+                android:layout_width="match_parent"
+                android:layout_height="86dp"
+                android:background="@drawable/button_background"
+                android:ellipsize="none"
+                android:fontFamily="sans-serif-smallcaps"
+                android:shadowColor="#000000"
+                android:shadowDx="5"
+                android:shadowDy="5"
+                android:shadowRadius="5"
+                android:text="Cantates de l'orgue"
+                android:textColor="#FFFFFF"
+                android:textSize="34dp"
+                android:textStyle="bold" />
+
         </LinearLayout>
 
     </FrameLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</android.support.constraint.ConstraintLayout>
 
