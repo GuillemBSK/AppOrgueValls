@@ -54,12 +54,12 @@
 
     <ImageButton
         android:id="@+id/btn_play_cantates"
-        android:layout_width="196dp"
-        android:layout_height="203dp"
+        android:layout_width="277dp"
+        android:layout_height="281dp"
+        android:background="@drawable/volume_off"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@android:drawable/ic_media_play" />
+        app:layout_constraintTop_toTopOf="parent" />
 
 </android.support.constraint.ConstraintLayout>
