@@ -96,10 +96,21 @@ public class Pregunta extends AppCompatActivity implements View.OnClickListener{
         }
 
         //Definim si és una pregunta és tipus Spinner segons l'índex.
-        else if(indexPreguntaActual == 1 || indexPreguntaActual == 3 || indexPreguntaActual == 5 || indexPreguntaActual == 7 || indexPreguntaActual == 11){
+        else if(indexPreguntaActual == 2 || indexPreguntaActual == 3 || indexPreguntaActual == 5 || indexPreguntaActual == 7 || indexPreguntaActual == 11){
             PreguntaSpinner.indexPreguntaActual = this.indexPreguntaActual;
             Intent intent = new Intent(Pregunta.this, PreguntaSpinner.class);
             startActivityForResult(intent,0);
+            indexPreguntaActual++;
+            txtIdPregunta.setText(""+indexPreguntaActual);
+            pregunta.setText(Opcions.question[indexPreguntaActual]);
+            imatgePregunta.setImageResource(Opcions.images[indexPreguntaActual]);
+        }
+
+        //Definim si és una pregunta és tipus Relaciona segons l'índex. //TODO -> TERMINAR
+        else if(indexPreguntaActual == 101010){
+            PreguntaSpinner.indexPreguntaActual = this.indexPreguntaActual;
+            Intent intent = new Intent(Pregunta.this, Relaciona.class);
+            startActivity(intent);
             indexPreguntaActual++;
             txtIdPregunta.setText(""+indexPreguntaActual);
             pregunta.setText(Opcions.question[indexPreguntaActual]);
