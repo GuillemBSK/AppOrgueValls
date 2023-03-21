@@ -56,9 +56,10 @@
         android:id="@+id/btn_play_cantates"
         android:layout_width="196dp"
         android:layout_height="203dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@android:drawable/ic_media_play"
-        tools:layout_editor_absoluteY="539dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_media_play" />
 
 </android.support.constraint.ConstraintLayout>

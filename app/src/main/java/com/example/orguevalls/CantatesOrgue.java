@@ -1,9 +1,10 @@
 package com.example.orguevalls;
-
-import android.media.AudioManager;
+import android.content.Intent;
 import android.media.SoundPool;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.ImageButton;
 
 public class CantatesOrgue extends AppCompatActivity {
 
@@ -13,9 +14,23 @@ public class CantatesOrgue extends AppCompatActivity {
         setContentView(R.layout.cantates_orgue);
         getSupportActionBar().hide();
 
-        SoundPool soundPool = new SoundPool(5, AudioManager.STREAM_MUSIC, 0);
-        int soundId = soundPool.load(this, R.raw.snoring, 1);
-        // soundId for reuse later on
-        soundPool.play(soundId, 1, 1, 0, 1, 1);
+        ImageButton play = findViewById(R.id.btn_play_cantates);
+
+        SoundPool soundpool = new SoundPool.Builder().build();
+        int soundId = soundpool.load(this, R.raw.snoring, 1);
+
+        //TODO: Implementar reproductor completo (Play, pause, stop...)
+        play.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                soundpool.play(soundId, 1, 1, 1, 0, 1);
+            }
+        });
     }
+
+
+
+
 }
