@@ -73,7 +73,7 @@
                 android:layout_height="15dp" />
 
             <Button
-                android:id="@+id/btn_info_orgue"
+                android:id="@+id/btn_historia_orgue"
                 android:layout_width="match_parent"
                 android:layout_height="86dp"
                 android:background="@drawable/button_background"
@@ -83,7 +83,7 @@
                 android:shadowDx="5"
                 android:shadowDy="5"
                 android:shadowRadius="5"
-                android:text="Informació"
+                android:text="Historia"
                 android:textColor="#FFFFFF"
                 android:textSize="34dp"
                 android:textStyle="bold" />

@@ -1,22 +1,246 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:background="@drawable/background_principal"
     android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="798dp"
+        android:layout_height="58dp"
+        android:background="#7A000000"
+        android:backgroundTint="#000000"
+        android:foregroundTint="#FFFFFF"
+        android:gravity="center"
+        android:text="HISTÒRIA "
+        android:textColor="#FFFFFF"
+        android:textSize="48sp"
+        tools:layout_editor_absoluteX="2dp"
+        tools:layout_editor_absoluteY="52dp" />
+
+    <Button
+        android:id="@+id/btn_enrere_historia"
+        android:layout_width="427dp"
+        android:layout_height="54dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="40dp"
+        android:background="@drawable/button_background"
+        android:ellipsize="none"
+        android:fontFamily="sans-serif-smallcaps"
+        android:shadowColor="#000000"
+        android:shadowDx="5"
+        android:shadowDy="5"
+        android:shadowRadius="5"
+        android:text="⬅Torna a la pregunta"
+        android:textColor="#FFFFFF"
+        android:textSize="34dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="28dp"
+        tools:layout_editor_absoluteY="58dp" />
+
     <ScrollView
-        android:layout_width="409dp"
-        android:layout_height="732dp"
+        android:layout_width="545dp"
+        android:layout_height="958dp"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" />
+            android:orientation="vertical">
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="19dp" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="122dp"
+                android:background="#46000000"
+                android:backgroundTint="#000000"
+                android:foregroundTint="#FFFFFF"
+                android:text="Valls havia tingut sempre un orgue.  Abans de construir-se l’actual església de st Joan n’hi havia una de més petita, la de st Miquel. Se sap que aquesta ja tenia un orgue petit. "
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="19dp" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="match_parent"
+                android:layout_height="122dp"
+                android:background="#46000000"
+                android:backgroundTint="#000000"
+                android:foregroundTint="#FFFFFF"
+                android:text="Quan es va construir l’església de st Joan va necessitar un orgue més gran que s’adeqüés a les noves mesures de la nau.   "
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="19dp" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="match_parent"
+                android:layout_height="64dp"
+                android:background="#46000000"
+                android:backgroundTint="#000000"
+                android:foregroundTint="#FFFFFF"
+                android:text="La construcció del nou orgue es va fer entre els anys 1587 i 1590."
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="19dp" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="match_parent"
+                android:layout_height="334dp"
+                app:srcCompat="@drawable/historia_1" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="19dp" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#46000000"
+                android:backgroundTint="#000000"
+                android:foregroundTint="#FFFFFF"
+                android:text="Estava situat a la meitat de la nau. "
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="19dp" />
+
+            <TextView
+                android:id="@+id/textView13"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#46000000"
+                android:backgroundTint="#000000"
+                android:foregroundTint="#FFFFFF"
+                android:text="Els teclats estaven situats en alçada en una mena de balconada."
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="19dp" />
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#46000000"
+                android:backgroundTint="#000000"
+                android:foregroundTint="#FFFFFF"
+                android:text="L’organista hi accedia per una escala situada a l’interior del mur. "
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="19dp" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#46000000"
+                android:backgroundTint="#000000"
+                android:foregroundTint="#FFFFFF"
+                android:text="L’any 1936 va ser destruït i van fondre el metall dels tubs per fer munició per a la guerra civil espanyola. L’últim dia que es va fer sonar va ser el 21 de juliol. "
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="19dp" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="match_parent"
+                android:layout_height="241dp"
+                app:srcCompat="@drawable/historia_2" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="19dp" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#46000000"
+                android:backgroundTint="#000000"
+                android:foregroundTint="#FFFFFF"
+                android:text="Tenia unes portes que es tancàven quan l’orgue no s’utilitzava. Les portes tapaven els tubs de la façana. "
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="19dp" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#46000000"
+                android:backgroundTint="#000000"
+                android:foregroundTint="#FFFFFF"
+                android:text="Molts orgues catalans de l’època tenien portes amb pintures o cortines. "
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="19dp" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#46000000"
+                android:backgroundTint="#000000"
+                android:foregroundTint="#FFFFFF"
+                android:text="Les pintures que es veien a la part de fora, quan les portes estaven tancades, mostràven l’Anunciació de l’àngel a Maria.  Les de la part de dins, i que es veien quan les portes estaven obertes, ens mostraven en un cantó el naixement de Jesús i en l’altra la resurrecció."
+                android:textColor="#FFFFFF"
+                android:textSize="24sp" />
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="19dp" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="match_parent"
+                android:layout_height="342dp"
+                app:srcCompat="@drawable/historia_3" />
+        </LinearLayout>
     </ScrollView>
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</android.support.constraint.ConstraintLayout>

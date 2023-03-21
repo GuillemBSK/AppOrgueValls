@@ -83,7 +83,7 @@
                 android:value="" />
         </activity>
         <activity
-            android:name=".PantallaRelacionar"
+            android:name=".Historia"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

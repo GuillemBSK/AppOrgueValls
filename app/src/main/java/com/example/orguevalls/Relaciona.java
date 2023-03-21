@@ -13,26 +13,15 @@ import android.widget.Toast;
  */
 public class Relaciona extends AppCompatActivity
 {
-    /**
-     * Estat de la pregunta. Si esta en 0, accepta respostes; 1: contestada.
-     */
+
     public int state = 0;
 
-    /**
-     * Array a on es guardará si cada dropdown s'ha respós bé.
-     * -1: encara no contestat; 0: resposta incorrecta; 1: resposta correcta.
-     */
+
     public int[] didItGetItRight = new int[]{-1,-1,-1,-1};
 
-    /**
-     * Com el didItGetItRight, pero en general. De tota la pregunta.
-     * -1: encara no contestat; 0: resposta incorrecta; 1: resposta correcta.
-     */
+
     public int didItGetItRightInGeneral = -1;
 
-    /**
-     * Array amb les respostes correctes en l'ordre correcte.
-     */
     public String[] correctAnswers = new String[]
     {
         "Té milers de tubs i necessita un espai gran per a posar-lo",
@@ -41,9 +30,6 @@ public class Relaciona extends AppCompatActivity
         "Té només un teclat però ja té dimensions considerables"
     };
 
-    /**
-     * Array amb les respostes possibles.
-     */
     public String[] dropdownOptions = new String[]
     {
         "Té només un teclat però ja té dimensions considerables",
@@ -52,14 +38,9 @@ public class Relaciona extends AppCompatActivity
         "Té milers de tubs i necessita un espai gran per a posar-lo"
     };
 
-    /**
-     * Els dropdowns de la pantalla.
-     */
+
     public Spinner dropdown1, dropdown2, dropdown3, dropdown4;
 
-    /**
-     * L'ImageButton principal de la pantalla.
-     */
     public Button btnSeguent;
 
     /**
