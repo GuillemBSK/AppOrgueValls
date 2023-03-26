@@ -10,6 +10,8 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,11 +23,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button btn_historia_orgue = findViewById(R.id.btn_historia_orgue);
         btn_comenca.setOnClickListener(this);
 
+        SoundPool soundpool = new SoundPool.Builder().build();
+        int soundId = soundpool.load(this, R.raw.btnsound, 1);
+
         btn_cantates_orgue.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v)
             {
+                soundpool.play(soundId, 1, 1, 1, 0, 1);
                 Intent intent = new Intent(MainActivity.this, CantatesOrgue.class);
                 startActivityForResult(intent,0);
             }
@@ -36,6 +42,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onClick(View v)
             {
+                soundpool.play(soundId, 1, 1, 1, 0, 1);
                 Intent intent = new Intent(MainActivity.this, Historia.class);
                 startActivityForResult(intent,0);
             }
@@ -44,6 +51,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
+        SoundPool soundpool = new SoundPool.Builder().build();
+        int soundId = soundpool.load(this, R.raw.btnsound, 1);
+        soundpool.play(soundId, 1, 1, 1, 0, 1);
         Intent intent = new Intent(MainActivity.this, Pregunta.class);
         startActivityForResult(intent,0);
     }

@@ -24,13 +24,13 @@
         android:shadowRadius="5"
         android:text="CANTATES DE L'ORGUE"
         android:textColor="#FFFFFF"
-        android:textSize="34sp"
+        android:textSize="40sp"
         android:textStyle="bold"
         app:lineHeight="45dp"
         tools:layout_conversion_absoluteHeight="202dp"
         tools:layout_conversion_absoluteWidth="340dp"
-        tools:layout_editor_absoluteX="59dp"
-        tools:layout_editor_absoluteY="46dp" />
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="111dp" />
 
     <Button
         android:id="@+id/btn_enrere_cantates"
@@ -57,9 +57,41 @@
         android:layout_width="277dp"
         android:layout_height="281dp"
         android:background="@drawable/volume_off"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="374dp"
+        android:layout_height="315dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/btn_play"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="PLAY"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/btn_pause"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="PAUSE"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/btn_stop"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="STOP"
+            android:textSize="30dp" />
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

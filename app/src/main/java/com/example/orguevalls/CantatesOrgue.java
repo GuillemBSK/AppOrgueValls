@@ -40,6 +40,39 @@ public class CantatesOrgue extends AppCompatActivity {
             }
         });
 
+        Button btn_play = findViewById(R.id.btn_play);
+        Button btn_pause = findViewById(R.id.btn_pause);
+        Button btn_stop = findViewById(R.id.btn_stop);
+
+        btn_play.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                soundpool.play(soundId, 1, 1, 1, 0, 1);
+            }
+        });
+
+        btn_pause.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                soundpool.pause(soundId);
+            }
+        });
+
+        btn_stop.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                soundpool.stop(soundId);
+            }
+        });
+
+
+
         Button btnEnrere = findViewById(R.id.btn_enrere_cantates);
         btnEnrere.setOnClickListener(new View.OnClickListener()
         {
