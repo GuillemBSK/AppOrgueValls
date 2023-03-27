@@ -21,9 +21,8 @@ public class Pregunta extends AppCompatActivity implements View.OnClickListener{
     Button botoSubmit;
     ImageButton botoInfo;
     ImageView topLeft, topRight, middleLeft, middleRight, bottomLeft, bottomRight;
-    TextView txtIdPregunta;
-    static int puntuacio = 0;
-    static int errors = 0;
+    public static int puntuacio = 0;
+    public static int errors = 0;
     static int indexPreguntaActual = 0;
     int numPreguntesTotals = 12;
 
@@ -38,7 +37,6 @@ public class Pregunta extends AppCompatActivity implements View.OnClickListener{
         pregunta = findViewById(R.id.preguntaSpinner);
         imatgePregunta = findViewById(R.id.img);
         botoInfo = findViewById(R.id.botoInfo);
-        txtIdPregunta = findViewById(R.id.num_pregunta);
         
         topLeft = findViewById(R.id.top_left);
         topRight = findViewById(R.id.top_right);
@@ -63,11 +61,8 @@ public class Pregunta extends AppCompatActivity implements View.OnClickListener{
 
                 Intent intent = new Intent(Pregunta.this, Informacio.class);
                 startActivityForResult(intent,0);
-
-
                 }
         });
-
         carregaNovaPregunta();
 
     }
@@ -90,38 +85,40 @@ public class Pregunta extends AppCompatActivity implements View.OnClickListener{
     }
 
 
-    private void carregaNovaPregunta() {
+    public void carregaNovaPregunta() {
         if(indexPreguntaActual == numPreguntesTotals){  //En cas de ser la última pregunta, carregem el layout de resum.
             acabaTest();
         }
 
         //Definim si és una pregunta és tipus Spinner segons l'índex.
-        else if(indexPreguntaActual == 2 || indexPreguntaActual == 3 || indexPreguntaActual == 5 || indexPreguntaActual == 7 || indexPreguntaActual == 11){
+        else if(indexPreguntaActual == 1 || indexPreguntaActual == 3 || indexPreguntaActual == 5 || indexPreguntaActual == 11){
             PreguntaSpinner.indexPreguntaActual = this.indexPreguntaActual;
             Intent intent = new Intent(Pregunta.this, PreguntaSpinner.class);
             startActivityForResult(intent,0);
             indexPreguntaActual++;
-            txtIdPregunta.setText(""+indexPreguntaActual);
             pregunta.setText(Opcions.question[indexPreguntaActual]);
             imatgePregunta.setImageResource(Opcions.images[indexPreguntaActual]);
         }
 
-        //Definim si és una pregunta és tipus Relaciona segons l'índex. //TODO -> TERMINAR
-        else if(indexPreguntaActual == 101010){
+        //Definim si és una pregunta és tipus Relaciona segons l'índex.
+        else if(indexPreguntaActual == 7){
             PreguntaSpinner.indexPreguntaActual = this.indexPreguntaActual;
             Intent intent = new Intent(Pregunta.this, Relaciona.class);
             startActivity(intent);
             indexPreguntaActual++;
-            txtIdPregunta.setText(""+indexPreguntaActual);
             pregunta.setText(Opcions.question[indexPreguntaActual]);
             imatgePregunta.setImageResource(Opcions.images[indexPreguntaActual]);
         }
 
         //Si no, carreguem una nova pregunta i imatge.
         else{
-            txtIdPregunta.setText(""+indexPreguntaActual);
             pregunta.setText(Opcions.question[indexPreguntaActual]);
             imatgePregunta.setImageResource(Opcions.images[indexPreguntaActual]);
+        }
+
+        if(indexPreguntaActual == 12){
+            Intent intent = new Intent(Pregunta.this, Resum.class);
+            startActivityForResult(intent,0);
         }
     }
 

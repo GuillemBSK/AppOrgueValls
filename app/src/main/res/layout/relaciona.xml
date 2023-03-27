@@ -113,7 +113,7 @@
             android:shadowDx="5"
             android:shadowDy="5"
             android:shadowRadius="5"
-            android:text="Quants escuts de la ciutat has pogut comptabilitzar al llarg de la visita?"
+            android:text="Llegiu i relacioneu cada tipus d’orgue amb la definició que creieu que li correspon."
             android:textAlignment="center"
             android:textColor="#FFFFFF"
             android:textSize="28sp" />
@@ -124,13 +124,23 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="274dp"
+            android:layout_height="328dp"
             android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="404dp"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#31000000"
+                    android:gravity="center"
+                    android:text="Orgue portatiu"
+                    android:textColor="#000000"
+                    android:textSize="34sp" />
 
                 <ImageView
                     android:id="@+id/img1"
@@ -156,6 +166,16 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#31000000"
+                    android:gravity="center"
+                    android:text="Orgue positiu"
+                    android:textColor="#000000"
+                    android:textSize="34sp" />
+
                 <ImageView
                     android:id="@+id/img2"
                     android:layout_width="match_parent"
@@ -177,13 +197,23 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="270dp"
+            android:layout_height="342dp"
             android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="404dp"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#31000000"
+                    android:gravity="center"
+                    android:text="Orgue principal"
+                    android:textColor="#000000"
+                    android:textSize="34sp" />
 
                 <ImageView
                     android:id="@+id/img3"
@@ -207,6 +237,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#31000000"
+                    android:gravity="center"
+                    android:text="Gran orgue"
+                    android:textColor="#000000"
+                    android:textSize="34sp" />
 
                 <ImageView
                     android:id="@+id/img4"
@@ -238,7 +278,7 @@
             android:orientation="horizontal">
 
             <ImageButton
-                android:id="@+id/infoSpinner"
+                android:id="@+id/infoRelaciona"
                 android:layout_width="101dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"

@@ -13,12 +13,12 @@ public class Opcions {
             "Busqueu aquest carreu i situeu-lo al plànol. (Cal respondre per avançar)",
             "Quants escuts de la ciutat has pogut comptabilitzar al llarg de la visita?",
             "Segons la imatge, on creieu que estava situat l'orgue anterior? Situeu-lo al plànol",
-            "Observeu bé la imatge i responeu.",
+            "Ara aneu al lloc, busqueu el codi i obriu la informació. Observeu bé la imatge i responeu.",
             "Aneu a la ubicació que mostra el plànol i obriu la informació del codi QR.",
             "Quina és la relació entre el disseny de la façana del nou orgue i la ciutat de Valls?",
             "Aneu a la ubicació que mostra el plànol i obriu la nova informació. Llegiu i relacioneu cada tipus d’orgue amb la definició que creieu que li correspon.",
             "Llegiu i relacioneu cada tipus d’orgue amb la definició que creieu que li correspon.",
-            "Ja sabeu força coses sobre aquest instrument. Aneu a la nova ubicació per continuar amb l’activitat.Mireu bé la façana de l’orgue i trieu de totes aquestes parts les que són visibles. barnilles, caixa de l’expressiu, manuals, manxes, pedal de l’expressiu, pedaler, poms dels registres, secret, tubs.",
+            "Ja sabeu força coses sobre aquest instrument. Aneu a la nova ubicació per continuar amb l’activitat",
             "Mireu bé la façana de l’orgue i trieu de totes aquestes parts les que són visibles.",
             "Ja esteu acabant. Aneu a obrir el codi que us donarà, completarà la informació sobre aquest instrument. Quina és la diferència entre orguener i organista?",
             "Quina és la diferència entre orguener i organista?",
@@ -28,6 +28,10 @@ public class Opcions {
     // === POSSIBLES RESPOSTES (IMATGES) ===
 
     public static int choices[][] = {
+            {R.id.top_left,R.id.top_right,R.id.middle_left, R.id.middle_right, R.id.bottom_left, R.id.bottom_right},
+            {R.id.top_left,R.id.top_right,R.id.middle_left, R.id.middle_right, R.id.bottom_left, R.id.bottom_right},
+            {R.id.top_left,R.id.top_right,R.id.middle_left, R.id.middle_right, R.id.bottom_left, R.id.bottom_right},
+            {R.id.top_left,R.id.top_right,R.id.middle_left, R.id.middle_right, R.id.bottom_left, R.id.bottom_right},
             {R.id.top_left,R.id.top_right,R.id.middle_left, R.id.middle_right, R.id.bottom_left, R.id.bottom_right},
             {R.id.top_left,R.id.top_right,R.id.middle_left, R.id.middle_right, R.id.bottom_left, R.id.bottom_right},
             {R.id.top_left,R.id.top_right,R.id.middle_left, R.id.middle_right, R.id.bottom_left, R.id.bottom_right},
@@ -46,10 +50,16 @@ public class Opcions {
             R.id.bottom_left,
             R.id.middle_right,
             R.id.top_right,
+            R.id.top_right,
+            R.id.top_left,
+            R.id.bottom_right,
             R.id.bottom_right,
             R.id.top_left,
-            R.id.bottom_left,
-            R.id.middle_left
+            R.id.top_left,
+            R.id.middle_left,
+            R.id.middle_left,
+            R.id.middle_left,
+
     };
 
     // === IMATGE DE CADA PREGUNTA ===
@@ -58,6 +68,12 @@ public class Opcions {
             R.drawable.pregunta1,
             R.drawable.pregunta2,
             R.drawable.pregunta3,
+            R.drawable.pregunta4,
+            R.drawable.novaubicacio,
+            R.drawable.castellscampanar,
+            R.drawable.pregunta4,
+            R.drawable.pregunta4,
+            R.drawable.pregunta4,
             R.drawable.pregunta4,
             R.drawable.pregunta4,
             R.drawable.pregunta4,
@@ -77,16 +93,19 @@ public class Opcions {
             {"L’antic orgue estava situat a la meitat de la nau i suspès dalt d’una balconada tal com podeu veure en les imatges. De vegades els orgues estan situats just damunt la porta d’entrada de l’edifici en la zona de l’anomenat cor.","Hi ha diferents tipus d’orgues segons les èpoques, la utilització que se’n feia, els espais on estaven ubicats..."," "," "," "},
             {"L’orgue és un instrument de vent, això vol dir que el so el produeix l’aire quan vibra en passar pels tubs.","Aquest instrument tan gran té unes parts visibles, la façana i la consola, i unes parts que estan a l’interior i que són els mecanismes que fan que l’orgue soni. La consola és el centre de comandament de la persona que toca l’instrument."," "," "," "},
             {"Aquest orgue en l’actualitat consta de 1384 tubs però està preparat per a tenir-ne 2504. Cada tecla té associat, com a mínim,  un tub per a cada un dels registres que es puguin activar.", "Recordeu que la recuperació i construcció ha estat possible gràcies a les donacions de gent particular, empreses de la ciutat i les administracions.", "Hi ha dos tipus de tubs segons la manera de produir el so: els de boca o labials i els de llengüeta.  També  la mida, la forma i els materials dels que estan fets els tubs donen una sonoritat diferent segons el que es requereix per a cada un dels registres", "Si l’organista activa el registre de trompeta sonaran els tubs que estan modelats per a produir aquest tipus de so. Si activa el registre de gralla sonaran els tubs que estan preparats per a fer-ho i així amb tots els sons.", "L’organista també pot combinar diferents registres per a tocar alhora."},
-            {"A partir d'ara la Ciutat comptarà amb un intrument ubicat en aquest espai tan gran i que està pensat que tingui diferents usos: Concerts,Aprenentatge i estudi de l'instrument","","",""},
-            {""},
-
+            {"A partir d'ara la Ciutat comptarà amb un intrument ubicat en aquest espai tan gran i que està pensat que tingui diferents usos: Concerts,Aprenentatge i estudi de l'instrument","","","",""},
+            {"","","","",""},
+            {"","","","",""},
+            {"","","","",""},
+            {"","","","",""},
+            {"","","","",""},
     };
 
     // === OPCIONS DELS SPINNERS ===
 
     public static String[][] spinnerChoices = {
             {""},
-            {"Entre 10 i 20", "Entre 21 i 40", "Més de 40"},
+            {"Entre 10 i 20","Entre 21 i 40", "Més de 40"},
             {""},
             {"Està arran de terra", "Està suspès en una balconada"},
             {""},
@@ -96,7 +115,12 @@ public class Opcions {
             {""},
             {""},
             {""},
-            {"No hi ha cap diferència, és el mateix.", "L’orguener construeix i l’organista toca.","L’organista construeix i l’orguener toca.","L’orguener toca molt i l’organista no toca gaire."}
+            {"No hi ha cap diferència, és el mateix.", "L’orguener construeix i l’organista toca.","L’organista construeix i l’orguener toca.","L’orguener toca molt i l’organista no toca gaire."},
+            {""},
+            {""},
+            {""},
+            {""},
+            {""},
     };
 
     public static String[] spinnerAnswers = {
@@ -107,10 +131,15 @@ public class Opcions {
             "",
             "Els castells i el campanar",
             "",
-            "EN CONSTRUCCIÓ",
             "",
             "",
             "",
-            "L’orguener construeix i l’organista toca."
+            "",
+            "L’orguener construeix i l’organista toca.",
+            "",
+            "",
+            "",
+            "",
+            "",
     };
 }

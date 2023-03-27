@@ -259,24 +259,6 @@
                 android:foregroundTint="#000000"
                 app:srcCompat="@android:drawable/ic_dialog_info" />
 
-            <TextView
-                android:id="@+id/num_pregunta"
-                android:layout_width="157dp"
-                android:layout_height="71dp"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:background="#40000000"
-                android:fontFamily="sans-serif-smallcaps"
-                android:gravity="center"
-                android:shadowColor="#000000"
-                android:shadowDx="5"
-                android:shadowDy="5"
-                android:shadowRadius="5"
-                android:text="0"
-                android:textAlignment="center"
-                android:textColor="#FFFFFF"
-                android:textSize="30sp" />
-
         </LinearLayout>
 
     </LinearLayout>
