@@ -1,7 +1,6 @@
 package com.example.orguevalls;
 import android.content.Intent;
 import android.media.MediaPlayer;
-import android.media.SoundPool;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -20,24 +19,33 @@ public class CantatesOrgue extends AppCompatActivity {
         setContentView(R.layout.cantates_orgue);
         getSupportActionBar().hide();
 
-        ImageButton play = findViewById(R.id.btn_play_cantates);
-
-        Button btnPlay;
+        Button btnPlay1;
+        Button btnPlay2;
         Button btnPause;
         Button btnStop;
         TextView txtSongName;
 
-        Button btn_play = findViewById(R.id.btn_play);
+        Button btn_play_1 = findViewById(R.id.btn_play_1);
+        Button btn_play_2 = findViewById(R.id.btn_play_2);
         Button btn_pause = findViewById(R.id.btn_pause);
         Button btn_stop = findViewById(R.id.btn_stop);
 
         music = MediaPlayer.create(this, R.raw.snoring);
 
-        btn_play.setOnClickListener(new View.OnClickListener()
+        btn_play_1.setOnClickListener(new View.OnClickListener()
         {
             @Override
             public void onClick(View v) {
-               music.start();
+                startFirstSong();
+                music.start();
+            }
+        });
+        btn_play_2.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v) {
+                startSecondSong();
+                music.start();
             }
         });
         btn_pause.setOnClickListener(new View.OnClickListener()
@@ -70,6 +78,13 @@ public class CantatesOrgue extends AppCompatActivity {
 
     public void stopMusic(){
         music.stop();
+    }
+
+    public void startFirstSong(){
         music = MediaPlayer.create(this, R.raw.snoring);
+    }
+
+    public void startSecondSong(){
+        music = MediaPlayer.create(this, R.raw.snoring2);
     }
 }

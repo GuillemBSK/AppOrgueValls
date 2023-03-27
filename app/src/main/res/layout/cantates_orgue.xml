@@ -52,20 +52,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <ImageButton
-        android:id="@+id/btn_play_cantates"
-        android:layout_width="277dp"
-        android:layout_height="281dp"
-        android:background="@drawable/volume_off"
-        android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <LinearLayout
-        android:layout_width="374dp"
-        android:layout_height="315dp"
+        android:layout_width="377dp"
+        android:layout_height="397dp"
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -73,10 +62,17 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <Button
-            android:id="@+id/btn_play"
+            android:id="@+id/btn_play_1"
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:text="PLAY"
+            android:text="PLAY CANTATA 1"
+            android:textSize="30dp" />
+
+        <Button
+            android:id="@+id/btn_play_2"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:text="PLAY CANTATA 2"
             android:textSize="30dp" />
 
         <Button
