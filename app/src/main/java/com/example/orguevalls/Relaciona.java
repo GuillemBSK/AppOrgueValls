@@ -15,14 +15,6 @@ public class Relaciona extends AppCompatActivity
 {
     public int[] esCorrecte = new int[]{-1,-1,-1,-1};
 
-    public String[] respostesCorrectes = new String[]
-    {
-        "Té milers de tubs i necessita un espai gran per a posar-lo",
-        "Es porta a sobre mentre es toca",
-        "Es pot posar a diferents llocs",
-        "Té només un teclat però ja té dimensions considerables"
-    };
-
     public String[] opcionsSpinner = new String[]
     {
         "Té només un teclat però ja té dimensions considerables",
@@ -31,13 +23,17 @@ public class Relaciona extends AppCompatActivity
         "Té milers de tubs i necessita un espai gran per a posar-lo"
     };
 
+    public String[] respostesCorrectes = new String[]
+    {
+            "Té milers de tubs i necessita un espai gran per a posar-lo",
+            "Es porta a sobre mentre es toca",
+            "Es pot posar a diferents llocs",
+            "Té només un teclat però ja té dimensions considerables"
+    };
 
     public Spinner dropdown1, dropdown2, dropdown3, dropdown4;
 
     public Button btnSeguent;
-    //public ImageButton btnInfo = findViewById(R.id.infoRelaciona);
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -61,7 +57,6 @@ public class Relaciona extends AppCompatActivity
         dropdown3 = findViewById(R.id.spinner3);
         dropdown4 = findViewById(R.id.spinner4);
         btnSeguent = findViewById(R.id.btn_seguent);
-        //btnSeguent.setOnClickListener(v -> onClick());
 
         ArrayAdapter<String> adapterView1 = new ArrayAdapter<String>
         (
@@ -74,46 +69,30 @@ public class Relaciona extends AppCompatActivity
         dropdown3.setAdapter(adapterView1);
         dropdown4.setAdapter(adapterView1);
 
-        /**
-        btnInfo.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                //Informacio.indexPreguntaActual = indexPreguntaActual;
-                Intent intent = new Intent(Relaciona.this, Informacio.class);
-                startActivityForResult(intent,0);
-            }
-        });
-         **/
-
         btnSeguent.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                //Informacio.indexPreguntaActual = indexPreguntaActual;
-                Pregunta.indexPreguntaActual++;
-                finish();
+                comprovaRespostes();
             }
         });
     }
 
 
     @SuppressWarnings({"ConstantConditions", "UnusedAssignment"})
-    private void checkAnswers()
+    private void comprovaRespostes()
     {
-        if(dropdown1.getSelectedItem().toString().equals(respostesCorrectes[0]))
-        {
+        if(dropdown1.getSelectedItem().toString().equals(respostesCorrectes[0])) {
             esCorrecte[0] = 1;
         }
         else esCorrecte[0] = 0;
-        if(dropdown2.getSelectedItem().toString().equals(respostesCorrectes[1]))
-        {
+        if(dropdown2.getSelectedItem().toString().equals(respostesCorrectes[1])) {
             esCorrecte[1] = 1;
         }
         else esCorrecte[1] = 0;
-        if(dropdown3.getSelectedItem().toString().equals(respostesCorrectes[2]))
-        {
+        if(dropdown3.getSelectedItem().toString().equals(respostesCorrectes[2])) {
             esCorrecte[2] = 1;
         }
         else esCorrecte[2] = 0;
-        if(dropdown4.getSelectedItem().toString().equals(respostesCorrectes[3]))
-        {
+        if(dropdown4.getSelectedItem().toString().equals(respostesCorrectes[3])) {
             esCorrecte[3] = 1;
         }
         else esCorrecte[3] = 0;
@@ -124,6 +103,7 @@ public class Relaciona extends AppCompatActivity
                 && dropdown4.getSelectedItem().toString().equals(respostesCorrectes[3]))
         {
             Pregunta.puntuacio++;
+            finish();
         }else{
             Pregunta.errors++;
         }

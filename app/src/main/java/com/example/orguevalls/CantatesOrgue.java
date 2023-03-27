@@ -66,15 +66,10 @@ public class CantatesOrgue extends AppCompatActivity {
                 startActivity(switchIntent);
             }
         });
-
-
     }
 
     public void stopMusic(){
         music.stop();
         music = MediaPlayer.create(this, R.raw.snoring);
     }
-
-
-
 }
