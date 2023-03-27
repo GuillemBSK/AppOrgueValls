@@ -1,15 +1,18 @@
 package com.example.orguevalls;
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.media.SoundPool;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.TextView;
 
 public class CantatesOrgue extends AppCompatActivity {
 
     public int clicked = 0;
+    MediaPlayer music;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,58 +22,38 @@ public class CantatesOrgue extends AppCompatActivity {
 
         ImageButton play = findViewById(R.id.btn_play_cantates);
 
-        SoundPool soundpool = new SoundPool.Builder().build();
-        int soundId = soundpool.load(this, R.raw.snoring, 1);
-
-        //TODO: Implementar reproductor completo (Play, pause, stop...)
-        play.setOnClickListener(new View.OnClickListener()
-        {
-            @Override
-            public void onClick(View v)
-            {
-                if (clicked == 0) {
-                    soundpool.play(soundId, 1, 1, 1, 0, 1);
-                    play.setBackground(getResources().getDrawable(R.drawable.volume_on));
-                    clicked = 1;
-                } else if (clicked == 1) {
-                    soundpool.stop(soundId);
-                    play.setBackground(getResources().getDrawable(R.drawable.volume_off));
-                    clicked = 0;
-                }
-            }
-        });
+        Button btnPlay;
+        Button btnPause;
+        Button btnStop;
+        TextView txtSongName;
 
         Button btn_play = findViewById(R.id.btn_play);
         Button btn_pause = findViewById(R.id.btn_pause);
         Button btn_stop = findViewById(R.id.btn_stop);
 
+        music = MediaPlayer.create(this, R.raw.snoring);
+
         btn_play.setOnClickListener(new View.OnClickListener()
         {
             @Override
-            public void onClick(View v)
-            {
-                soundpool.play(soundId, 1, 1, 1, 0, 1);
+            public void onClick(View v) {
+               music.start();
             }
         });
-
         btn_pause.setOnClickListener(new View.OnClickListener()
         {
             @Override
-            public void onClick(View v)
-            {
-                soundpool.pause(soundId);
+            public void onClick(View v) {
+                music.pause();
             }
         });
-
         btn_stop.setOnClickListener(new View.OnClickListener()
         {
             @Override
-            public void onClick(View v)
-            {
-                soundpool.stop(soundId);
+            public void onClick(View v) {
+                stopMusic();
             }
         });
-
 
 
         Button btnEnrere = findViewById(R.id.btn_enrere_cantates);
@@ -78,6 +61,7 @@ public class CantatesOrgue extends AppCompatActivity {
         {
             @Override
             public void onClick(View v) {
+                music.stop();
                 Intent switchIntent = new Intent(CantatesOrgue.this, MainActivity.class);
                 startActivity(switchIntent);
             }
@@ -86,6 +70,10 @@ public class CantatesOrgue extends AppCompatActivity {
 
     }
 
+    public void stopMusic(){
+        music.stop();
+        music = MediaPlayer.create(this, R.raw.snoring);
+    }
 
 
 
