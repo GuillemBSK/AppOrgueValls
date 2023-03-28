@@ -27,6 +27,7 @@ public class CantatesOrgue extends AppCompatActivity {
 
         Button btn_play_1 = findViewById(R.id.btn_play_1);
         Button btn_play_2 = findViewById(R.id.btn_play_2);
+        Button btn_play = findViewById(R.id.btn_play);
         Button btn_pause = findViewById(R.id.btn_pause);
         Button btn_stop = findViewById(R.id.btn_stop);
 
@@ -60,6 +61,14 @@ public class CantatesOrgue extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 stopMusic();
+            }
+        });
+
+        btn_play.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v) {
+                music.start();
             }
         });
 
