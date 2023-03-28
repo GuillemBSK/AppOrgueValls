@@ -19,6 +19,7 @@ public class CantatesOrgue extends AppCompatActivity {
         setContentView(R.layout.cantates_orgue);
         getSupportActionBar().hide();
 
+        //IDENTIFIQUEM I LOCALITZEM TOTS ELS BOTONS.
         Button btnPlay1;
         Button btnPlay2;
         Button btnPause;
@@ -32,6 +33,11 @@ public class CantatesOrgue extends AppCompatActivity {
         Button btn_stop = findViewById(R.id.btn_stop);
 
         music = MediaPlayer.create(this, R.raw.snoring);
+
+        /**
+         * ASSIGNEM A CADA BOTÓ UNA FUNCIONALITAT (AMB SETONCLICKLISTENER), JA SIGUI
+         * SELECCIONAR LA PISTA O FER PLAY, PAUSE O STOP.
+         */
 
         btn_play_1.setOnClickListener(new View.OnClickListener()
         {
@@ -79,11 +85,16 @@ public class CantatesOrgue extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 music.stop();
+                MainActivity.music.start();
                 Intent switchIntent = new Intent(CantatesOrgue.this, MainActivity.class);
                 startActivity(switchIntent);
             }
         });
     }
+
+    /**
+     * MÈTODES AUXILIARS PER EL REPRODUCTOR.
+     */
 
     public void stopMusic(){
         music.stop();

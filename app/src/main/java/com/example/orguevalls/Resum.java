@@ -30,6 +30,7 @@ public class Resum extends AppCompatActivity {
                 Pregunta.errors = 0;
                 Pregunta.puntuacio = 0;
                 Pregunta.indexPreguntaActual = 0;
+                MainActivity.music.stop();
                 Intent intent = new Intent(Resum.this, MainActivity.class);
                 startActivityForResult(intent,0);
             }
