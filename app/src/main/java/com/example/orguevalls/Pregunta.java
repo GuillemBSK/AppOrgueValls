@@ -37,14 +37,16 @@ public class Pregunta extends AppCompatActivity implements View.OnClickListener{
         pregunta = findViewById(R.id.preguntaSpinner);
         imatgePregunta = findViewById(R.id.img);
         botoInfo = findViewById(R.id.botoInfo);
-        
+
+        // Creem un botó per a cada imatge a triar.
         topLeft = findViewById(R.id.top_left);
         topRight = findViewById(R.id.top_right);
         middleLeft = findViewById(R.id.middle_left);
         middleRight = findViewById(R.id.middle_right);
         bottomLeft = findViewById(R.id.bottom_left);
         bottomRight = findViewById(R.id.bottom_right);
-        
+
+        // Assignem un onClickListener a cada botó.
         topLeft.setOnClickListener(this);
         topRight.setOnClickListener(this);
         middleLeft.setOnClickListener(this);
@@ -52,7 +54,7 @@ public class Pregunta extends AppCompatActivity implements View.OnClickListener{
         bottomLeft.setOnClickListener(this);
         bottomRight.setOnClickListener(this);
 
-        //Obrim el layout d'informació.
+        //Obrim el layout d'informació en cas de clicar el botó.
 
         botoInfo.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {

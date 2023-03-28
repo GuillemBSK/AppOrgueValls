@@ -12,6 +12,7 @@ public class Historia extends AppCompatActivity implements View.OnClickListener{
         setContentView(R.layout.historia);
         getSupportActionBar().hide();
 
+        // Creem el botó per tornar al menú principal.
         Button btn_inici = findViewById(R.id.btn_enrere_historia);
         btn_inici.setOnClickListener(this);
     }

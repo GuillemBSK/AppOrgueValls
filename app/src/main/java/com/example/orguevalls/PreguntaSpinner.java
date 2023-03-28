@@ -65,12 +65,14 @@ public class PreguntaSpinner extends Activity implements View.OnClickListener {
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         s.setAdapter(adapter);
 
+        // Definim la manera en la que sabem quina opció de l'spinner ha estat triada.
         s.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int pos, long l) {
                 spinnerValue = parent.getItemAtPosition(pos).toString();
             }
 
+            //En cas de que cap opció s'hagi seleccionat, per defecte, es seleccionarà la primera.
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
                 spinnerValue = parent.getItemAtPosition(0).toString();
@@ -95,6 +97,7 @@ public class PreguntaSpinner extends Activity implements View.OnClickListener {
     public void onClick(View view) {
         Toast.makeText(getApplicationContext(),spinnerValue, Toast.LENGTH_SHORT).show();
 
+        // Comprovem que el valor seleccionat a l'spinner és el correcte mirant les respostes marcades a la classe Opcions.java
         if(spinnerValue==Opcions.spinnerAnswers[indexPreguntaActual]){
             Pregunta.puntuacio++;
             Pregunta.errors = errors;

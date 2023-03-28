@@ -18,7 +18,7 @@ public class Informacio extends AppCompatActivity implements View.OnClickListene
         getSupportActionBar().hide();
 
         //Omplim la informació segons el numero de pregunta.
-
+        // La informació de cada pregunta s'extreu de la classe Opcions.java
         TextView info1 = findViewById(R.id.info1);
         TextView info2 = findViewById(R.id.info2);
         TextView info3 = findViewById(R.id.info3);

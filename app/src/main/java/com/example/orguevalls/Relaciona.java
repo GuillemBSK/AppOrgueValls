@@ -69,6 +69,7 @@ public class Relaciona extends AppCompatActivity
         dropdown3.setAdapter(adapterView1);
         dropdown4.setAdapter(adapterView1);
 
+        // Quan es fa clic al botó, es comprovarà que la resposta sigui la correcta.
         btnSeguent.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 comprovaRespostes();
@@ -80,6 +81,7 @@ public class Relaciona extends AppCompatActivity
     @SuppressWarnings({"ConstantConditions", "UnusedAssignment"})
     private void comprovaRespostes()
     {
+        // Es comprova que cada opció de l'spinner seleccionada sigui la correcta.
         if(dropdown1.getSelectedItem().toString().equals(respostesCorrectes[0])) {
             esCorrecte[0] = 1;
         }
@@ -97,6 +99,8 @@ public class Relaciona extends AppCompatActivity
         }
         else esCorrecte[3] = 0;
 
+        /* Si la resposta seleccionada a cada spinner és la correcta, la pregunta es donarà com a bona i
+        s'avança a una nova pregunta del joc.*/
         if(dropdown1.getSelectedItem().toString().equals(respostesCorrectes[0])
                 && dropdown2.getSelectedItem().toString().equals(respostesCorrectes[1])
                 && dropdown3.getSelectedItem().toString().equals(respostesCorrectes[2])
@@ -105,6 +109,7 @@ public class Relaciona extends AppCompatActivity
             Pregunta.puntuacio++;
             finish();
         }else{
+            // En cas contrari, el contador d'errors sumarà.
             Pregunta.errors++;
         }
     }
